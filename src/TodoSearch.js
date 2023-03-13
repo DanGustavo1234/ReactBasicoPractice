@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './TodoSearch.css';
 
-export default function TodoSearch() {
+function TodoSearch() {
+  const onsearchValueChange =(event) => {
+      console.log(event.target.value)
+  };
   return (
-    <div> <input placeholder="Onion"/></div>
-  )
+    <input className="TodoSearch" placeholder="Cebolla" onChange={onsearchValueChange} />
+  );
 }
+
+export { TodoSearch };

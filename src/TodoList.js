@@ -1,18 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './TodoList.css'
 
-
-const todos=[{text:"Cut onion",complete:false},
-{text:"Hello",complete:false},
-{text:"Bye",complete:false}];
-
-export default function TodoList(todos) {
+function TodoList(props) {
   return (
-    <div> 
-    <h1>Hello</h1>
-    {/* {todos.map(todo=> (
-      <h1>Hello</h1>
-    ))} */}
-  
-  </div>
-  )
+    <section>
+      <ul>
+        {props.children}
+      </ul>
+    </section>
+  );
 }
+
+export { TodoList };

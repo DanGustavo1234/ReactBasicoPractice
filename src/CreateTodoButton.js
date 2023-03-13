@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './CreateTodoButton.css';
 
-export default function CreateTodoButton() {
+function CreateTodoButton(props) {
+  const onClickButton = (msg) =>{
+    alert(msg)
+  }
   return (
-    <div> <button>Create</button></div>
-  )
+    <button className="CreateTodoButton" onClick={() => onClickButton('Open Modal')}>
+    +</button>
+  );
 }
+
+export { CreateTodoButton };
